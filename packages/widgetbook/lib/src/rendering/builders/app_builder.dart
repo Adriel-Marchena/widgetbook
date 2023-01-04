@@ -23,6 +23,7 @@ Widget _defaultAppBuilderMethod(BuildContext context, Widget child) {
       return childWidget ?? child;
     },
     debugShowCheckedModeBanner: false,
+    routeInformationProvider: _router.routeInformationProvider,
     routeInformationParser: _router.routeInformationParser,
     routerDelegate: _router.routerDelegate,
   );
@@ -34,6 +35,7 @@ AppBuilderFunction get materialAppBuilder =>
       return MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerDelegate: _router.routerDelegate,
+        routeInformationProvider: _router.routeInformationProvider,
         routeInformationParser: _router.routeInformationParser,
       );
     };
